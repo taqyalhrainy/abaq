@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABAQ PERFUME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="./WhatsApp Image 2025-05-25 at 18.22.11_62ae3ce6.jpg" height="200" width="200">
+    <h1>ABAQ PERFUME</h1>
+    <div class="cards">
+        <div class="card" onclick="window.location.href='men.html'">العطور الرجالية</div>
+        <div class="card" onclick="window.location.href='women.html'">العطور النسائية</div> 
+    </div>
+    <div class="cart-icon" onclick="showCart()">
+  🛒 <span id="cart-count">0</span>
+</div>
+<script>
+  let cartCount = 0;
+  let cartItems = {};
+
+  function addToCart(productName) {
+    cartCount++;
+    document.getElementById("cart-count").textContent = cartCount;
+
+    if (cartItems[productName]) {
+      cartItems[productName]++;
+    } else {
+      cartItems[productName] = 1;
+    }
+  }
+
+  function showCart() {
+    if (cartCount === 0) {
+      alert("🛒 السلة فارغة");
+      return;
+    }
+
+    let message = "🛒 محتوى السلة:\n";
+    for (let item in cartItems) {
+      message += `- ${item} × ${cartItems[item]}\n`;
+    }
+    alert(message);
+  }
+</script>
+
+    
+</body>
+</html>

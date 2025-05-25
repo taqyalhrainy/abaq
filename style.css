@@ -1,0 +1,64 @@
+body{
+    margin: 0; /* نشيل الهوامش حول الصفحة */
+  padding: 0; /* نشيل أي حشو داخل الصفحة */
+  background-color: black; /* الخلفية سوداء */
+  color: white; /* لون الخط ذهبي */
+  font-family: Arial, sans-serif; /* نوع الخط */
+  display: flex; /* نخلي المحتوى يتوزع بخط مرن */
+  flex-direction: column; /* المحتوى عمودي */
+  align-items: center; /* نوسّط العناصر أفقياً */
+  justify-content: center; /* نوسّط العناصر عموديًا */
+  height: 100vh; /* تخلي الصفحة تاخد طول الشاشة كله */
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    color: white;
+    background-color: #111;
+    border: 2px solid white;
+    padding: 30px 40px ;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 1.5rem;
+
+}
+
+.card:hover{
+    background-color: silver;
+    transform: scale(1.05);
+}
+
+.cart-icon{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color :red;
+    border-radius: 12px;
+    padding: 3px 4px 6px;
+    cursor: pointer;
+
+}
+
+.cart:hover {
+  background-color: #222;
+}
+.cart-count{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+

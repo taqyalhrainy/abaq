@@ -1,0 +1,134 @@
+
+body{
+  background-color: white;
+  color: red;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.cart-icon{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color :red;
+    border-radius: 12px;
+    padding: 3px 4px 6px;
+    cursor: pointer;
+    background-color: #555;
+}
+
+.searchBar{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  left: 80px;
+  margin-top: 0px;
+}
+input{
+    padding: 6px;
+    background: white;
+    width: 150px;
+    border-radius: 12px;
+    
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+  margin-top: 15px;
+  position:relative ;
+  left: 150px;
+    color: white;
+    background-color: #111;
+    border: 2px solid white;
+    padding: 5px 5px ;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 1.5rem;
+
+}
+
+.card:hover{
+    background-color: silver;
+    transform: scale(1.05);
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.product-card {
+  background-color: #111;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  color: #d4af37;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-name {
+  font-size: 0.9rem;
+}
+
+.add-to-cart-btn {
+  background-color: #d4af37;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: gold;
+}
+.cart-popup {
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  background-color: #111;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 250px;
+  z-index: 2000;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+

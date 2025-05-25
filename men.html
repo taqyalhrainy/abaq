@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>men perfume</title>
+    <link rel="stylesheet" href="style-men.css">
+</head>
+<body>
+
+
+
+    <div class="cart-icon" onclick="showCart()">
+  🛒 <span class="cart-count" id="cart-count">0</span>
+    </div>
+    
+    <div class="searchBar">
+        <input type="text" placeholder="Search..." >
+    </div>
+     <div class="cards">
+        <div class="card" onclick="window.location.href='men.html'">العطور الرجالية</div>
+        <div class="card" onclick="window.location.href='ABAQ.html'">القائمة الرئيسية</div> 
+    </div>
+
+
+
+    <div class="products-container">
+
+  <div class="product-card">
+    <img src="./350x350.jpg" alt="بلو شانيل – Blue Chanel">
+    <div class="product-info">
+      <span class="product-name">بلو شانيل – Blue Chanel</span>
+      <button class="add-to-cart-btn" onclick="addToCart('بلو شانيل – Blue Chanel')">+</button>
+    </div>
+  </div>
+
+
+  <div class="product-card">
+    <img src="./Y0785220_F078524009_E01_GHC.jpg" alt="sauvage-سوقاج">
+    <div class="product-info">
+      <span class="product-name">sauvage-سوقاج</span>
+      <button class="add-to-cart-btn" onclick="addToCart('sauvage-سوقاج')">+</button>
+    </div>
+  </div>
+
+
+
+</div>
+<script>
+  let cartCount = 0;
+  let cartItems = {};
+
+  function addToCart(productName) {
+    cartCount++;
+    document.getElementById("cart-count").textContent = cartCount;
+
+    if (cartItems[productName]) {
+      cartItems[productName]++;
+    } else {
+      cartItems[productName] = 1;
+    }
+  }
+
+  function showCart() {
+    if (cartCount === 0) {
+      alert("🛒 السلة فارغة");
+      return;
+    }
+
+    let message = "🛒 محتوى السلة:\n";
+    for (let item in cartItems) {
+      message += `- ${item} × ${cartItems[item]}\n`;
+    }
+    alert(message);
+  }
+</script>
+
+
+
+</body>
+</html>
